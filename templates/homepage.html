@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post" class="form">
+
+    <!---PENDENTE REINCERÇÃO DA DIV UE ESTAVA ANTERIORMENTE-->
+    <h3>Bem-vindo ao Chat</h3>
+    
+        <input type="text"
+        placeholder="Insira o seu nome"
+        name="name"
+        value="{{name}}"
+        id="input-name"
+        />
+
+        <input type="text" 
+        placeholder="Código da sala" 
+        name="code" 
+        value="{{code}}"
+        id="input-code"
+        />
+
+    <button type="submit" name="join" class="join-btn">Entre em uma sala</button>
+    <button type="submit" name="create" class="create-btn">Criar uma sala</button>
+    {% if error %}
+    <ul>
+        <li>{{error}}</li>
+    </ul>
+    {% endif %}
+</form>
+
+{% endblock %}
+
+
+<!--
+
+LISTA DE PENDÊNCIAS:
+- INSERIR ÍCONE NOS INPUTS
+- REVISAR BACK-END - AS MENSAGENS NÃO ESTÃO SENDO ATIVAS PELO SOCKET
+- USAR WIDGET PARA LINKAR FEED DO INSTAGRAM
+- TESTAR IFRAME REFERENTE AS PARTIDAS NO DRAFT
+- CRIAR UM CARROSEL COM IMAGENS/LINKS ENCAMINHANDO PARA O SITE (PESQUISAR SLIDESHOW AUTOMATICA
+NA W3SCHOOL)
+- INSERIR UMA FONTE ADEQUADA PARA O PROJETO (FONTE DESEJAVEL PROXIMA-ALGUMA-COISA)
+
+
+
+-->
